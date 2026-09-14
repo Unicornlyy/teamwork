@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 城市风貌图 3：苏州平江路水巷（白墙黛瓦 · 石拱桥 · 乌篷船），可替换为真实照片 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3eee6"/>
+      <stop offset="100%" stop-color="#dfe7e4"/>
+    </linearGradient>
+    <linearGradient id="water3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9cbfc6"/>
+      <stop offset="100%" stop-color="#6f99a4"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="600" fill="url(#sky3)"/>
+  <circle cx="110" cy="90" r="36" fill="#fdf6e3" opacity="0.9"/>
+
+  <!-- 远景民居（低饱和，推远层次） -->
+  <g opacity="0.55">
+    <rect x="300" y="250" width="200" height="120" fill="#ece7dc"/>
+    <polygon points="288,254 400,208 512,254" fill="#4a4f50"/>
+  </g>
+
+  <!-- 左侧民居 -->
+  <g>
+    <rect x="36" y="252" width="214" height="180" fill="#f6f2e9" stroke="#ddd5c5" stroke-width="2"/>
+    <polygon points="16,258 143,176 270,258" fill="#33393c"/>
+    <polygon points="40,258 143,202 246,258" fill="#3d4346"/>
+    <rect x="78" y="300" width="46" height="58" rx="2" fill="#5b4636"/>
+    <line x1="101" y1="300" x2="101" y2="358" stroke="#3f2f22" stroke-width="3"/>
+    <line x1="78" y1="329" x2="124" y2="329" stroke="#3f2f22" stroke-width="3"/>
+    <rect x="160" y="300" width="46" height="42" rx="2" fill="#5b4636"/>
+    <line x1="183" y1="300" x2="183" y2="342" stroke="#3f2f22" stroke-width="3"/>
+    <line x1="160" y1="321" x2="206" y2="321" stroke="#3f2f22" stroke-width="3"/>
+    <rect x="143" y="372" width="40" height="60" rx="3" fill="#6b523d"/>
+    <!-- 红灯笼 -->
+    <line x1="236" y1="258" x2="236" y2="286" stroke="#5b4636" stroke-width="3"/>
+    <ellipse cx="236" cy="300" rx="11" ry="14" fill="#d43d2e"/>
+    <rect x="231" y="286" width="10" height="4" fill="#e8a33d"/>
+    <line x1="236" y1="314" x2="236" y2="330" stroke="#e8a33d" stroke-width="2"/>
+  </g>
+
+  <!-- 右侧民居 -->
+  <g>
+    <rect x="550" y="240" width="220" height="192" fill="#f6f2e9" stroke="#ddd5c5" stroke-width="2"/>
+    <polygon points="528,246 660,168 792,246" fill="#33393c"/>
+    <polygon points="556,246 660,192 764,246" fill="#3d4346"/>
+    <rect x="580" y="286" width="44" height="42" rx="2" fill="#5b4636"/>
+    <line x1="602" y1="286" x2="602" y2="328" stroke="#3f2f22" stroke-width="3"/>
+    <line x1="580" y1="307" x2="624" y2="307" stroke="#3f2f22" stroke-width="3"/>
+    <rect x="668" y="286" width="44" height="58" rx="2" fill="#5b4636"/>
+    <line x1="690" y1="286" x2="690" y2="344" stroke="#3f2f22" stroke-width="3"/>
+    <line x1="668" y1="315" x2="712" y2="315" stroke="#3f2f22" stroke-width="3"/>
+    <rect x="612" y="372" width="40" height="60" rx="3" fill="#6b523d"/>
+    <line x1="560" y1="246" x2="560" y2="274" stroke="#5b4636" stroke-width="3"/>
+    <ellipse cx="560" cy="288" rx="11" ry="14" fill="#d43d2e"/>
+    <rect x="555" y="274" width="10" height="4" fill="#e8a33d"/>
+    <line x1="560" y1="302" x2="560" y2="318" stroke="#e8a33d" stroke-width="2"/>
+  </g>
+
+  <!-- 石驳岸 -->
+  <rect x="0" y="424" width="800" height="22" fill="#aaa396"/>
+  <rect x="0" y="424" width="800" height="6" fill="#c4bdae"/>
+
+  <!-- ========== 石拱桥 ========== -->
+  <polygon points="210,356 590,356 500,388 300,388" fill="#b5aea1"/>
+  <rect x="210" y="356" width="90" height="92" fill="#ada699"/>
+  <rect x="500" y="356" width="90" height="92" fill="#ada699"/>
+  <!-- 桥身拱洞（透出水面） -->
+  <path d="M300 388 A 100 74 0 0 0 500 388 Z" fill="url(#water3)"/>
+  <path d="M300 388 A 100 74 0 0 0 500 388" fill="none" stroke="#8d867a" stroke-width="8"/>
+  <!-- 桥面弧度 -->
+  <path d="M210 356 Q 400 274 590 356" fill="none" stroke="#8d867a" stroke-width="10"/>
+  <!-- 栏杆 -->
+  <path d="M210 334 Q 400 252 590 334" fill="none" stroke="#8d867a" stroke-width="6"/>
+  <g stroke="#8d867a" stroke-width="6" stroke-linecap="round">
+    <line x1="240" y1="336" x2="240" y2="314"/>
+    <line x1="280" y1="314" x2="280" y2="292"/>
+    <line x1="320" y1="298" x2="320" y2="276"/>
+    <line x1="360" y1="289" x2="360" y2="267"/>
+    <line x1="400" y1="286" x2="400" y2="264"/>
+    <line x1="440" y1="289" x2="440" y2="267"/>
+    <line x1="480" y1="298" x2="480" y2="276"/>
+    <line x1="520" y1="314" x2="520" y2="292"/>
+    <line x1="560" y1="336" x2="560" y2="314"/>
+  </g>
+
+  <!-- ========== 河水 ========== -->
+  <rect x="0" y="446" width="800" height="154" fill="url(#water3)"/>
+  <!-- 房屋与桥的倒影 -->
+  <g opacity="0.18" fill="#3f4a48">
+    <rect x="36" y="452" width="214" height="90"/>
+    <rect x="550" y="452" width="220" height="96"/>
+    <rect x="210" y="452" width="380" height="26"/>
+  </g>
+  <g fill="none" stroke="#e8f1f2" stroke-width="2.5" opacity="0.65" stroke-linecap="round">
+    <path d="M40 486 q40 -9 80 0"/>
+    <path d="M180 522 q40 -9 80 0"/>
+    <path d="M330 492 q40 -9 80 0"/>
+    <path d="M300 548 q40 -9 80 0"/>
+    <path d="M500 520 q40 -9 80 0"/>
+    <path d="M610 566 q40 -9 80 0"/>
+    <path d="M70 582 q40 -9 80 0"/>
+  </g>
+
+  <!-- 乌篷船 -->
+  <g>
+    <path d="M505 500 Q 615 532 725 500 L 704 518 Q 615 540 526 518 Z" fill="#33383b"/>
+    <path d="M548 500 Q 615 442 682 500 Z" fill="#2a2f32"/>
+    <path d="M548 500 Q 615 442 682 500" fill="none" stroke="#1d2124" stroke-width="3"/>
+    <line x1="615" y1="452" x2="615" y2="500" stroke="#1d2124" stroke-width="2"/>
+    <line x1="526" y1="518" x2="505" y2="500" stroke="#1d2124" stroke-width="3"/>
+  </g>
+</svg>

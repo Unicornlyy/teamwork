@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 爱好示意图 1：球类运动（SVG 矢量占位图，可直接替换为同名或任意格式的真实照片） -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#155e75"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c2703a"/>
+      <stop offset="100%" stop-color="#7c3f12"/>
+    </linearGradient>
+    <radialGradient id="ball" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="70%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 背景（球馆） -->
+  <rect x="0" y="0" width="800" height="600" fill="url(#bg)"/>
+  <!-- 木地板 -->
+  <rect x="0" y="430" width="800" height="170" fill="url(#floor)"/>
+  <line x1="0" y1="470" x2="800" y2="470" stroke="#ffffff" stroke-opacity="0.7" stroke-width="4"/>
+  <path d="M260 470 A140 90 0 0 0 540 470" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="4"/>
+
+  <!-- 篮球 -->
+  <circle cx="330" cy="285" r="150" fill="url(#ball)"/>
+  <circle cx="330" cy="285" r="150" fill="none" stroke="#7c2d12" stroke-width="6"/>
+  <line x1="180" y1="285" x2="480" y2="285" stroke="#7c2d12" stroke-width="6"/>
+  <path d="M330 135 A70 150 0 0 1 330 435" fill="none" stroke="#7c2d12" stroke-width="6"/>
+  <path d="M330 135 A70 150 0 0 0 330 435" fill="none" stroke="#7c2d12" stroke-width="6"/>
+  <path d="M180 285 A150 70 0 0 1 480 285" fill="none" stroke="#7c2d12" stroke-width="6"/>
+
+  <!-- 排球 -->
+  <circle cx="630" cy="220" r="80" fill="#f8fafc"/>
+  <circle cx="630" cy="220" r="80" fill="none" stroke="#94a3b8" stroke-width="5"/>
+  <path d="M550 220 A80 30 0 0 0 710 220" fill="none" stroke="#94a3b8" stroke-width="5"/>
+  <line x1="630" y1="140" x2="630" y2="300" stroke="#94a3b8" stroke-width="5"/>
+
+  <text x="400" y="555" text-anchor="middle" font-family="Microsoft YaHei, sans-serif"
+        font-size="34" fill="#fef3c7" letter-spacing="6">球 类 运 动</text>
+</svg>

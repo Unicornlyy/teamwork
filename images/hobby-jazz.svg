@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 爱好示意图 2：爵士乐（SVG 矢量占位图，可直接替换为同名或任意格式的真实照片） -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="stage" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="60%" stop-color="#7c2d12"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 舞台背景 -->
+  <rect x="0" y="0" width="800" height="600" fill="url(#stage)"/>
+  <!-- 聚光灯 -->
+  <ellipse cx="220" cy="120" rx="150" ry="260" fill="#fde68a" opacity="0.10"/>
+  <ellipse cx="620" cy="120" rx="160" ry="240" fill="#fde68a" opacity="0.10"/>
+
+  <!-- 飘动的音符 -->
+  <g fill="#fde68a" opacity="0.95">
+    <!-- 音符 1 -->
+    <g transform="translate(150,250) scale(1.2)">
+      <ellipse cx="0" cy="40" rx="34" ry="24"/>
+      <rect x="30" y="-70" width="8" height="112"/>
+      <path d="M38 -70 Q80 -52 38 -20 Z"/>
+    </g>
+    <!-- 音符 2 -->
+    <g transform="translate(360,170) scale(1.5)" fill="#ffffff">
+      <ellipse cx="0" cy="40" rx="34" ry="24"/>
+      <rect x="30" y="-70" width="8" height="112"/>
+      <path d="M38 -70 Q80 -52 38 -20 Z"/>
+    </g>
+    <!-- 音符 3 -->
+    <g transform="translate(590,260) scale(1.1)">
+      <ellipse cx="0" cy="40" rx="34" ry="24"/>
+      <rect x="30" y="-70" width="8" height="112"/>
+      <path d="M38 -70 Q80 -52 38 -20 Z"/>
+    </g>
+  </g>
+
+  <!-- JAZZ 标题 -->
+  <text x="400" y="455" text-anchor="middle" font-family="Georgia, serif" font-style="italic"
+        font-size="120" font-weight="bold" fill="#fde68a">JAZZ</text>
+  <text x="400" y="510" text-anchor="middle" font-family="Microsoft YaHei, sans-serif"
+        font-size="28" fill="#fef3c7" letter-spacing="8">自 由 · 即 兴 · 沉 浸</text>
+</svg>

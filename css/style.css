@@ -1,0 +1,444 @@
+/* ==========================================================
+   团队个人网站 外部样式表 style.css —— v2 简洁大气版
+   所有个人主页与职业技能页面共用本文件
+   ========================================================== */
+
+/* ---------- 1. 基础重置 ---------- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    color: #1e293b;
+    background-color: #f8f9fb;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 统一设置全部 <p> 段落标签的样式 */
+p {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.85;
+    margin-bottom: 12px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+
+/* ---------- 2. 通用布局类 ---------- */
+.container {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* 通用卡片类 */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 32px 36px;
+    margin-bottom: 20px;
+    border: 1px solid #e8eaef;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    border-color: #d1d5db;
+}
+
+/* 通用小标签类 */
+.tag {
+    display: inline-block;
+    background-color: #eef2ff;
+    color: #4338ca;
+    border: 1px solid #c7d2fe;
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 13px;
+    margin: 4px 6px 4px 0;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background-color: #4338ca;
+    color: #fff;
+}
+
+/* ---------- 3. 顶部横幅与导航 ---------- */
+.header {
+    background: linear-gradient(160deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding-bottom: 44px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 装饰光斑 */
+.header::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(129, 140, 248, 0.12) 0%, transparent 70%);
+}
+
+/* 标签限定类（上下文）：只作用于 class="header" 内部的 h1 */
+.header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 12px 0 4px;
+}
+
+.header p {
+    color: #94a3b8;
+}
+
+.nav {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-brand {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #e2e8f0;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* 专门用于 <a> 标签的类，带 hover 效果 */
+a.link {
+    font-weight: 500;
+    color: #6366f1;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a.link:hover {
+    color: #4338ca;
+    border-bottom-color: #4338ca;
+}
+
+/* 上下文选择器：导航栏内的链接 */
+.nav-links a.link {
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-links a.link:hover {
+    color: #818cf8;
+    border-bottom-color: #818cf8;
+}
+
+/* 个人信息横幅 */
+.hero {
+    text-align: center;
+    padding: 28px 24px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.04);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.stu-id {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #94a3b8 !important;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+/* ---------- 4. 正文内容 ---------- */
+.content {
+    padding: 36px 24px 56px;
+}
+
+.info-list li {
+    padding: 11px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 15px;
+    color: #334155;
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    display: inline-block;
+    width: 84px;
+    color: #94a3b8;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* ---------- 5. 爱好图片画廊 ---------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.gallery figure {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f8fafc;
+    border: 1px solid #e8eaef;
+    transition: box-shadow 0.3s ease;
+}
+
+.gallery figure:hover {
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery figure:hover img {
+    transform: scale(1.04);
+}
+
+.gallery figcaption {
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #64748b;
+    background-color: #fff;
+    border-top: 1px solid #f1f5f9;
+}
+
+/* 占位框 */
+.photo-placeholder {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 14px;
+    padding: 16px;
+    background: repeating-linear-gradient(
+        45deg, #f8fafc, #f8fafc 10px, #f1f5f9 10px, #f1f5f9 20px
+    );
+}
+
+/* ---------- 6. 职业规划双卡 ---------- */
+.plan-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.plan-card {
+    border-radius: 10px;
+    padding: 22px 24px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.plan-card::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.plan-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.plan-card p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+    font-size: 14px;
+    position: relative;
+}
+
+.plan-short {
+    background: linear-gradient(135deg, #312e81 0%, #4338ca 100%);
+}
+
+.plan-long {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+/* ---------- 7. 职业技能页专用 ---------- */
+.member-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+a.member-pill {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+a.member-pill:hover {
+    background-color: #1e293b;
+    color: #fff;
+    border-color: #1e293b;
+    transform: translateY(-1px);
+}
+
+/* ---------- 8. 页脚 ---------- */
+.footer {
+    text-align: center;
+    padding: 32px 16px;
+    color: #94a3b8;
+    font-size: 13px;
+    border-top: 1px solid #e8eaef;
+    margin-top: 20px;
+}
+
+/* ==========================================================
+   9. 响应式设计
+   ========================================================== */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+
+    .nav {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .avatar {
+        width: 130px;
+        height: 130px;
+    }
+
+    .card {
+        padding: 24px 20px;
+    }
+
+    .plan-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img,
+    .photo-placeholder {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding-bottom: 32px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+        letter-spacing: 0.5px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .avatar {
+        width: 110px;
+        height: 110px;
+    }
+
+    .info-label {
+        width: 68px;
+    }
+
+    .gallery img,
+    .photo-placeholder {
+        height: 150px;
+    }
+
+    .card {
+        padding: 20px 16px;
+        border-radius: 10px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+}
