@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>团队首页 - 我们的团队</title>
+
+    <!-- ==========================================================
+         团队页全部样式采用"内嵌自定义 CSS"（写在本文件 <style> 内）
+         评分点对照：
+         ① 共用选择器（同时选中两个及以上标签）：h1, h2, h3 {…}  /  figure, ul {…}
+         ② 类选择器：.wrap / .member-card / .btn …
+         ③ 上下文选择器：.member-card img、.city-gallery figcaption …
+         ④ <a> 标签 hover 效果：nav a:hover / .btn:hover / …
+         ⑤ 多处行内 CSS：见正文中的 style="…"
+         ⑥ 响应式：文件底部 @media 断点 900px / 600px
+         ========================================================== -->
+    <style>
+        /* ---------- 基础重置 ---------- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            color: #1e293b;
+            background-color: #f8f9fb;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ① 共用选择器（分组选择器）：同时给 h1、h2、h3 设置字体 */
+        h1, h2, h3 {
+            font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+            font-weight: 700;
+        }
+
+        img { max-width: 100%; display: block; }
+        ul { list-style: none; }
+        a { color: inherit; text-decoration: none; }
+
+        /* 另一个共用选择器：figure 与 ul 去边距 */
+        figure, ul { margin: 0; padding: 0; }
+
+        /* ---------- ② 类选择器 ---------- */
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- 顶部横幅 ---------- */
+        .site-header {
+            background: linear-gradient(160deg, #0f172a 0%, #1e293b 100%);
+            color: #fff;
+            padding-bottom: 56px;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-header::before {
+            content: "";
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 320px; height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(129,140,248,.10) 0%, transparent 70%);
+        }
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 18px 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative; z-index: 1;
+        }
+        .brand { font-size: 16px; font-weight: 600; letter-spacing: 1px; color: #e2e8f0; }
+        .topbar nav { display: flex; gap: 22px; flex-wrap: wrap; }
+
+        /* ④ <a> hover 效果 */
+        .topbar nav a {
+            color: #cbd5e1;
+            font-weight: 500;
+            font-size: 14px;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 2px;
+            transition: color .2s, border-color .2s;
+        }
+        .topbar nav a:hover {
+            color: #818cf8;
+            border-bottom-color: #818cf8;
+        }
+
+        .hero { text-align: center; padding: 52px 24px 0; position: relative; z-index: 1; }
+        .hero h1 {
+            font-size: 38px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+        }
+        .hero p { color: #94a3b8; font-size: 15px; }
+
+        /* ---------- 区块标题 ---------- */
+        .section { padding: 48px 0 8px; }
+        .section-title {
+            font-size: 24px;
+            color: #1e293b;
+            text-align: center;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .section-sub {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 36px;
+        }
+
+        /* ---------- ② 团队成员卡片 ---------- */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+        .member-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px 16px 22px;
+            text-align: center;
+            border: 1px solid #e8eaef;
+            box-shadow: 0 1px 3px rgba(15,23,42,.04);
+            transition: box-shadow .3s ease, border-color .3s ease;
+        }
+        .member-card:hover {
+            box-shadow: 0 10px 28px rgba(15,23,42,.10);
+            border-color: #d1d5db;
+        }
+
+        /* ③ 上下文选择器：member-card 内部的头像 */
+        .member-card img {
+            width: 96px; height: 96px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 14px;
+            border: 3px solid #f1f5f9;
+            transition: transform .35s ease, border-color .35s ease;
+        }
+        .member-card a:hover img {
+            transform: scale(1.06);
+            border-color: #c7d2fe;
+        }
+
+        /* ③ 上下文选择器：member-card 内的姓名、学号 */
+        .member-card h3 { font-size: 17px; margin-bottom: 2px; color: #1e293b; }
+        .member-card .sid {
+            font-size: 12px;
+            color: #94a3b8;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        .card-links { display: flex; flex-direction: column; gap: 8px; }
+
+        /* ② 按钮类 + ④ hover */
+        .btn {
+            display: block;
+            padding: 8px 0;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            background: #1e293b;
+            color: #fff !important;
+            transition: background .2s, transform .15s;
+        }
+        .btn:hover { background: #4338ca; transform: translateY(-1px); }
+        .btn.ghost {
+            background: #fff;
+            color: #475569 !important;
+            border: 1px solid #e2e8f0;
+        }
+        .btn.ghost:hover { background: #f8fafc; border-color: #cbd5e1; }
+
+        /* ---------- 城市板块 ---------- */
+        .city-banner {
+            margin: 0 0 30px;
+            border-radius: 12px;
+            padding: 32px 36px;
+            background: #fff;
+            border: 1px solid #e8eaef;
+            border-left: 4px solid #6366f1;
+            box-shadow: 0 1px 3px rgba(15,23,42,.04);
+        }
+        .fact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        .fact {
+            background: #fff;
+            border-radius: 10px;
+            padding: 22px 24px;
+            border: 1px solid #e8eaef;
+            transition: box-shadow .3s ease;
+        }
+        .fact:hover { box-shadow: 0 6px 16px rgba(15,23,42,.06); }
+        .fact h4 { font-size: 15px; margin-bottom: 8px; font-weight: 600; }
+        .fact p { font-size: 14px; color: #64748b; margin: 0; line-height: 1.75; }
+
+        .city-text { margin-bottom: 28px; }
+        .city-text h4 {
+            font-size: 17px;
+            color: #1e293b;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+        .city-text h4::before {
+            content: "";
+            display: inline-block;
+            width: 4px; height: 18px;
+            border-radius: 2px;
+            background: #6366f1;
+        }
+        .city-text p { font-size: 15px; color: #475569; line-height: 1.9; }
+
+        /* 美食标签 */
+        .food-tag {
+            display: inline-block;
+            border-radius: 6px;
+            padding: 5px 14px;
+            font-size: 13px;
+            margin: 5px 6px 5px 0;
+            border: 1px solid;
+            font-weight: 500;
+        }
+
+        /* ---------- ③ 上下文选择器：城市画廊 ---------- */
+        .city-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .city-gallery figure {
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid #e8eaef;
+            transition: box-shadow .3s ease;
+        }
+        .city-gallery figure:hover { box-shadow: 0 8px 20px rgba(15,23,42,.08); }
+        .city-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+        /* 图片绑了外链：hover 时放大 + 出现提示（④ a:hover） */
+        .city-gallery a { display: block; position: relative; }
+        .city-gallery a::after {
+            content: "点击查看 ↗";
+            position: absolute;
+            right: 12px; bottom: 12px;
+            background: rgba(15,23,42,.75);
+            color: #fff;
+            font-size: 11px;
+            padding: 4px 12px;
+            border-radius: 6px;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        .city-gallery a:hover::after { opacity: 1; }
+        .city-gallery a:hover img { transform: scale(1.05); }
+        .city-gallery figcaption {
+            padding: 12px 16px;
+            font-size: 13px;
+            color: #64748b;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        /* 获取更多信息 */
+        .more-links {
+            margin-top: 28px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 24px 28px;
+            border: 1px solid #e8eaef;
+        }
+        .more-links h4 { font-size: 16px; color: #1e293b; margin-bottom: 12px; font-weight: 600; }
+        .more-links li { padding: 7px 0; }
+        /* ③ 上下文选择器 + ④ a:hover */
+        .more-links li a {
+            color: #6366f1;
+            border-bottom: 1px solid #e0e7ff;
+            transition: color .2s, border-color .2s;
+        }
+        .more-links li a:hover {
+            color: #4338ca;
+            border-bottom-color: #4338ca;
+        }
+
+        /* ---------- 页脚 ---------- */
+        .site-footer {
+            margin-top: 56px;
+            padding: 32px 16px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 13px;
+            background: #0f172a;
+        }
+
+        /* ==========================================================
+           ⑥ 响应式设计
+           平板（≤900px）：成员卡片 2 列、城市图片单列大图
+           手机（≤600px）：成员卡片 2 列、字号缩小、信息卡单列
+           ========================================================== */
+        @media (max-width: 900px) {
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .city-gallery { grid-template-columns: 1fr; }
+            .city-gallery img { height: 240px; }
+            .fact-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .topbar { justify-content: center; text-align: center; }
+            .hero h1 { font-size: 28px; letter-spacing: 2px; }
+            .hero p { font-size: 14px; }
+            .section-title { font-size: 20px; }
+            .member-card img { width: 88px; height: 88px; }
+            .city-gallery img { height: 180px; }
+            .city-banner { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= 顶部横幅 + 导航 ================= -->
+    <header class="site-header">
+        <div class="topbar">
+            <span class="brand">我们的团队</span>
+            <nav>
+                <a href="#members">团队成员</a>
+                <a href="#city">城市介绍</a>
+                <a href="skills.html">职业技能页面</a>
+            </nav>
+        </div>
+        <div class="hero">
+            <!-- 行内 CSS ① -->
+            <span style="display:inline-block; background:rgba(129,140,248,.12); color:#a5b4fc;
+                         font-size:12px; letter-spacing:2px; padding:5px 16px; border-radius:6px; margin-bottom:20px;">
+                网络空间安全学院 · 网页设计课程作业
+            </span>
+            <h1>我们的团队</h1>
+            <!-- 行内 CSS ② -->
+            <p style="letter-spacing:2px;">四人同心 · 各展所长 · 携手完成本次网站设计</p>
+        </div>
+    </header>
+
+    <!-- ================= 团队成员 ================= -->
+    <section id="members" class="section wrap">
+        <h2 class="section-title">团队成员</h2>
+        <p class="section-sub">点击成员头像或「个人主页」按钮，进入对应成员的个人主页</p>
+
+        <div class="team-grid">
+
+            <!-- 成员 1：小罗（真实资料） -->
+            <article class="member-card">
+                <a href="profile-xiaoluo.html">
+                    <img src="images/member1.png" alt="小罗的头像（占位示例图）">
+                </a>
+                <h3>小罗</h3>
+                <p class="sid">SA225</p>
+                <div class="card-links">
+                    <a class="btn" href="profile-xiaoluo.html">个人主页</a>
+                    <a class="btn ghost" href="skills.html#xiaoluo">职业技能</a>
+                </div>
+            </article>
+
+            <!-- 成员 2（占位，替换【】即可） -->
+            <article class="member-card">
+                <a href="profile-member2.html">
+                    <img src="images/member2.png" alt="【成员2姓名】的头像（占位示例图）">
+                </a>
+                <h3>【成员2姓名】</h3>
+                <p class="sid">【学号】</p>
+                <div class="card-links">
+                    <a class="btn" href="profile-member2.html">个人主页</a>
+                    <a class="btn ghost" href="skills.html#member2">职业技能</a>
+                </div>
+            </article>
+
+            <!-- 成员 3（占位） -->
+            <article class="member-card">
+                <a href="profile-member3.html">
+                    <img src="images/member3.png" alt="【成员3姓名】的头像（占位示例图）">
+                </a>
+                <h3>【成员3姓名】</h3>
+                <p class="sid">【学号】</p>
+                <div class="card-links">
+                    <a class="btn" href="profile-member3.html">个人主页</a>
+                    <a class="btn ghost" href="skills.html#member3">职业技能</a>
+                </div>
+            </article>
+
+            <!-- 成员 4（占位） -->
+            <article class="member-card">
+                <a href="profile-member4.html">
+                    <img src="images/member4.png" alt="【成员4姓名】的头像（占位示例图）">
+                </a>
+                <h3>【成员4姓名】</h3>
+                <p class="sid">【学号】</p>
+                <div class="card-links">
+                    <a class="btn" href="profile-member4.html">个人主页</a>
+                    <a class="btn ghost" href="skills.html#member4">职业技能</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ================= 城市介绍：苏州 ================= -->
+    <section id="city" class="section wrap">
+        <h2 class="section-title">城市介绍 · 苏州</h2>
+        <p class="section-sub">「上有天堂，下有苏杭」—— 一座 2500 余年城址未迁的江南水城</p>
+
+        <!-- 城市横幅概述（行内 CSS ③：首字强调） -->
+        <div class="city-banner">
+            <p style="font-size:15px; color:#475569; line-height:1.9;">
+                <span style="font-size:32px; font-weight:800; color:#6366f1; float:left; line-height:1; margin:4px 12px 0 0;">苏</span>
+                州，古称姑苏、平江，是国家历史文化名城和著名的风景旅游城市，以古典园林、
+                小桥流水与精致苏式生活闻名天下。下面从地理位置、人口、风景名胜、文化与美食五个方面
+                带大家认识这座城市。
+            </p>
+        </div>
+
+        <!-- 三张信息卡：地理位置 / 人口 / 城市名片 -->
+        <div class="fact-grid">
+            <div class="fact" style="border-top:3px solid #6366f1;">
+                <h4 style="color:#6366f1;">地理位置</h4>
+                <p>位于江苏省东南部、长江三角洲中部，<strong>太湖东岸</strong>，
+                   京杭大运河纵贯南北，东接上海，北依长江，自古便是水陆要冲、商贸重镇。</p>
+            </div>
+            <div class="fact" style="border-top:3px solid #8b5cf6;">
+                <h4 style="color:#8b5cf6;">人口规模</h4>
+                <p>常住人口约 <strong>1300 万</strong>（2023 年末约 1295.8 万），
+                   下辖姑苏、吴中、相城、工业园区、高新区等区并代管四个县级市，
+                   昆山、张家港常年位居全国百强县前列。</p>
+            </div>
+            <div class="fact" style="border-top:3px solid #f59e0b;">
+                <h4 style="color:#f59e0b;">城市名片</h4>
+                <p>古典园林之城、江南水乡、丝绸之府、状元之乡，
+                   也是 GDP 常年居全国前列的现代化制造业与开放型经济大市。</p>
+            </div>
+        </div>
+
+        <!-- 风景名胜 -->
+        <div class="city-text">
+            <h4>风景名胜</h4>
+            <p>
+                苏州最负盛名的是<strong>古典园林</strong>：拙政园、留园跻身中国四大名园，
+                网师园、环秀山庄等 9 座园林被整体列入《世界文化遗产名录》，
+                "移步换景、咫尺之内再造乾坤"。城外有吴中第一名胜<strong>虎丘</strong>
+                及其千年斜塔云岩寺塔；城内有"姑苏城外寒山寺，夜半钟声到客船"的
+                <strong>寒山寺</strong>，有水陆并行、河街相邻的历史街区<strong>平江路、山塘街</strong>；
+                周边的周庄、同里、甪直等古镇保存着典型的江南水乡风貌，
+                金鸡湖畔则展示着现代苏州的繁华。
+            </p>
+
+            <!-- 城市风貌图片：前两张图片绑定了外部链接，点击图片即可跳转 -->
+            <div class="city-gallery">
+                <figure>
+                    <!-- 图片外链 ①：点击跳转到百度百科"拙政园" -->
+                    <a href="https://baike.baidu.com/item/%E6%8B%99%E6%94%BF%E5%9B%AD" target="_blank" rel="noopener">
+                        <img src="images/city-garden.svg" alt="苏州园林：飞檐亭阁、太湖石与荷塘（示意图）">
+                    </a>
+                    <figcaption>拙政园为代表的苏州园林 —— 点击图片可跳转百科了解更多</figcaption>
+                </figure>
+                <figure>
+                    <!-- 图片外链 ②：点击跳转到百度百科"虎丘" -->
+                    <a href="https://baike.baidu.com/item/%E8%99%8E%E4%B8%98" target="_blank" rel="noopener">
+                        <img src="images/city-tiger.svg" alt="虎丘云岩寺塔（示意图）">
+                    </a>
+                    <figcaption>虎丘云岩寺塔 —— 千年斜塔，"吴中第一名胜"</figcaption>
+                </figure>
+                <figure>
+                    <!-- 第三张为普通配图，未绑定链接 -->
+                    <img src="images/city-canal.svg" alt="平江路水巷：白墙黛瓦、石拱桥与乌篷船（示意图）">
+                    <figcaption>平江路历史街区 —— 白墙黛瓦、石桥水巷与乌篷船</figcaption>
+                </figure>
+            </div>
+            <p style="margin-top:8px; font-size:12px; color:#94a3b8;">
+                说明：以上为手绘风格城市风貌示意图，可在 images 文件夹中用真实照片替换同名文件。
+            </p>
+        </div>
+
+        <!-- 文化 -->
+        <div class="city-text">
+            <h4>文化底蕴</h4>
+            <p>
+                苏州建城已有 <strong>2500 多年</strong>，且城址至今基本未变，是吴文化的重要发祥地。
+                这里诞生了"百戏之祖"<strong>昆曲</strong>和婉转软糯的<strong>苏州评弹</strong>；
+                中国四大名绣之一的<strong>苏绣</strong>、桃花坞木版年画、碧螺春制作技艺等传承至今；
+                苏州自古文风鼎盛、状元辈出，今天的苏州博物馆由建筑大师贝聿铭设计，
+                粉墙黛瓦与光影庭院延续着这座城市雅致的审美。
+            </p>
+        </div>
+
+        <!-- 美食（行内 CSS ④～⑪：每个标签颜色直接写在元素上） -->
+        <div class="city-text">
+            <h4>苏式美食</h4>
+            <p>苏帮菜讲究"不时不食"、浓油赤酱中见清甜，街头小吃同样精致：</p>
+            <div style="margin-top:8px;">
+                <span class="food-tag" style="color:#b45309; background:#fffbeb; border-color:#fcd34d;">松鼠桂鱼</span>
+                <span class="food-tag" style="color:#b45309; background:#fffbeb; border-color:#fcd34d;">响油鳝糊</span>
+                <span class="food-tag" style="color:#0369a1; background:#f0f9ff; border-color:#7dd3fc;">苏式汤面</span>
+                <span class="food-tag" style="color:#0369a1; background:#f0f9ff; border-color:#7dd3fc;">奥灶面</span>
+                <span class="food-tag" style="color:#be123c; background:#fff1f2; border-color:#fda4af;">阳澄湖大闸蟹</span>
+                <span class="food-tag" style="color:#047857; background:#ecfdf5; border-color:#6ee7b7;">桂花糖藕</span>
+                <span class="food-tag" style="color:#047857; background:#ecfdf5; border-color:#6ee7b7;">鲜肉月饼</span>
+                <span class="food-tag" style="color:#6d28d9; background:#f5f3ff; border-color:#c4b5fd;">生煎馒头</span>
+                <span class="food-tag" style="color:#6d28d9; background:#f5f3ff; border-color:#c4b5fd;">碧螺春茶</span>
+            </div>
+        </div>
+
+        <!-- 获取更多信息：外部链接 -->
+        <div class="more-links">
+            <h4>获取更多信息（外部链接）</h4>
+            <ul>
+                <li><a href="https://baike.baidu.com/item/%E8%8B%8F%E5%B7%9E" target="_blank" rel="noopener">百度百科 · 苏州词条</a></li>
+                <li><a href="https://zh.wikipedia.org/wiki/%E8%8B%8F%E5%B7%9E%E5%B8%82" target="_blank" rel="noopener">维基百科 · 苏州市</a></li>
+                <li><a href="https://www.suzhou.gov.cn" target="_blank" rel="noopener">苏州市人民政府官方网站</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ================= 页脚 ================= -->
+    <footer class="site-footer">
+        <p style="margin-bottom:4px;">© 2026 我们的团队 · 团队成员页 / 个人主页 / 职业技能页</p>
+        <p>本页面为课程学习作业，部分图文资料来自公开网络，仅供学习使用</p>
+    </footer>
+
+</body>
+</html>

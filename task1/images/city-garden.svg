@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 城市风貌图 1：苏州园林意象（飞檐亭阁 · 太湖石 · 荷塘 · 月洞门），可替换为真实照片 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f5ef"/>
+      <stop offset="100%" stop-color="#c9e4da"/>
+    </linearGradient>
+    <linearGradient id="water1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8db9c4"/>
+      <stop offset="100%" stop-color="#5f93a3"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="600" fill="url(#sky1)"/>
+  <circle cx="660" cy="90" r="42" fill="#fde68a" opacity="0.85"/>
+
+  <!-- 远景飞鸟 -->
+  <g fill="none" stroke="#4b6b62" stroke-width="3" stroke-linecap="round">
+    <path d="M110 110 q12 -12 24 0 q12 -12 24 0"/>
+    <path d="M175 80 q9 -9 18 0 q9 -9 18 0"/>
+  </g>
+
+  <!-- 月洞门景墙 -->
+  <rect x="520" y="180" width="250" height="260" rx="6" fill="#f7f5ee" stroke="#d8d2c2" stroke-width="3"/>
+  <rect x="508" y="168" width="274" height="20" rx="6" fill="#39433f"/>
+  <circle cx="645" cy="320" r="82" fill="#bfe0d2"/>
+  <circle cx="645" cy="320" r="82" fill="none" stroke="#c9c2ae" stroke-width="6"/>
+  <path d="M615 360 q30 -50 60 0" fill="#7fae8e"/>
+  <rect x="628" y="300" width="34" height="48" fill="#8fb89a"/>
+
+  <!-- 左侧柳树 -->
+  <path d="M70 200 q-8 90 10 180" fill="none" stroke="#7a6a4f" stroke-width="10" stroke-linecap="round"/>
+  <g fill="none" stroke="#6fa47d" stroke-width="3" stroke-linecap="round" opacity="0.9">
+    <path d="M60 210 q-20 60 6 120"/>
+    <path d="M78 205 q24 70 0 140"/>
+    <path d="M48 230 q-26 56 -4 116"/>
+    <path d="M88 225 q30 64 10 128"/>
+    <path d="M66 190 q-6 70 18 150"/>
+  </g>
+
+  <!-- 太湖石 -->
+  <path d="M120 430
+           c-40 -10 -34 -70 -4 -86
+           c-18 -40 30 -74 58 -44
+           c36 -22 70 14 52 46
+           c28 12 18 64 -16 70
+           c-8 18 -74 26 -90 14 z"
+        fill="#9fb4ac" stroke="#6f8a81" stroke-width="3"/>
+  <ellipse cx="150" cy="356" rx="13" ry="18" fill="#5f7d74"/>
+  <ellipse cx="196" cy="396" rx="10" ry="15" fill="#5f7d74"/>
+  <ellipse cx="146" cy="414" rx="8" ry="11" fill="#5f7d74"/>
+
+  <!-- 亭台基座 -->
+  <polygon points="205,430 545,430 580,470 170,470" fill="#c6cfc8" stroke="#9ba8a0" stroke-width="3"/>
+  <rect x="215" y="430" width="320" height="10" fill="#a9b6ae"/>
+
+  <!-- 亭柱 -->
+  <g fill="#8c4a3f">
+    <rect x="245" y="290" width="16" height="140" rx="3"/>
+    <rect x="325" y="290" width="16" height="140" rx="3"/>
+    <rect x="407" y="290" width="16" height="140" rx="3"/>
+    <rect x="489" y="290" width="16" height="140" rx="3"/>
+  </g>
+  <rect x="235" y="282" width="280" height="14" rx="3" fill="#a85a4b"/>
+  <!-- 匾额 -->
+  <rect x="340" y="300" width="72" height="30" rx="3" fill="#6d3a31"/>
+  <text x="376" y="322" text-anchor="middle" font-family="KaiTi, STKaiti, serif"
+        font-size="19" fill="#f4e4c1">拙政</text>
+
+  <!-- 飞檐屋顶 -->
+  <path d="M150 290
+           C 230 230 330 214 400 214
+           C 470 214 570 230 650 290
+           C 600 278 560 284 545 300
+           L255 300
+           C 240 284 200 278 150 290 Z"
+        fill="#3a4a45" stroke="#27342f" stroke-width="3"/>
+  <path d="M255 300 L545 300 L520 316 L280 316 Z" fill="#485a54"/>
+  <!-- 宝顶 -->
+  <rect x="392" y="186" width="16" height="34" rx="4" fill="#2f3d38"/>
+  <circle cx="400" cy="184" r="9" fill="#c8a45c"/>
+
+  <!-- 荷塘 -->
+  <path d="M0 470 Q 200 452 400 470 T 800 470 L800 600 L0 600 Z" fill="url(#water1)"/>
+  <g stroke="#d7ecf0" stroke-width="2" opacity="0.6" fill="none">
+    <path d="M60 510 q40 -10 80 0"/>
+    <path d="M430 500 q40 -10 80 0"/>
+    <path d="M250 545 q40 -10 80 0"/>
+    <path d="M610 540 q40 -10 80 0"/>
+  </g>
+  <!-- 荷叶与荷花 -->
+  <g>
+    <ellipse cx="120" cy="535" rx="42" ry="15" fill="#4f8a63"/>
+    <ellipse cx="120" cy="531" rx="42" ry="14" fill="#5ea175"/>
+    <circle cx="120" cy="519" r="7" fill="#f4a7c0"/>
+    <ellipse cx="330" cy="558" rx="34" ry="12" fill="#4f8a63"/>
+    <ellipse cx="640" cy="552" rx="46" ry="15" fill="#5ea175"/>
+    <circle cx="640" cy="538" r="8" fill="#f4a7c0"/>
+    <circle cx="662" cy="542" r="5" fill="#f7c6d6"/>
+  </g>
+</svg>

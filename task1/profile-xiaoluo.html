@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小罗 - 个人主页</title>
+    <!-- 外部 CSS 样式表 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 页面内部内嵌 CSS：必须包含 ID 选择器、标题样式、上下文选择器 -->
+    <style>
+        /* ID 选择器：设置个人简介正文的字体样式 */
+        #bio-text {
+            font-family: Georgia, "Times New Roman", "宋体", serif;
+            font-size: 16px;
+            color: #475569;
+        }
+
+        /* 标题文本样式 */
+        h2 {
+            color: #1e293b;
+            font-size: 20px;
+            font-weight: 700;
+            border-left: 3px solid #6366f1;
+            padding-left: 14px;
+            margin: 0 0 18px;
+            letter-spacing: 0.5px;
+        }
+
+        /* 上下文选择器：设置 div.content 内部段落的行高 */
+        div.content p {
+            line-height: 1.9;
+        }
+
+        /* 强调文字 */
+        .accent {
+            color: #6366f1;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== 顶部横幅：照片 + 姓名 + 学号 ========== -->
+    <header class="header">
+        <nav class="nav">
+            <span class="nav-brand">小罗的个人主页</span>
+            <div class="nav-links">
+                <a class="link" href="index.html">团队页面</a>
+                <a class="link" href="skills.html#xiaoluo">职业技能页面</a>
+                <a class="link" href="mailto:123456@qq.com">电子邮箱</a>
+            </div>
+        </nav>
+        <div class="hero">
+            <!-- ======================================================
+                 【如何替换成自己的真人照片？】
+                 方法一（最简单，推荐）：
+                     把本人照片复制到 images 文件夹，并重命名为 member1.png，
+                     直接覆盖当前这张示例图即可，无需修改本 HTML 文件。
+                 方法二（保留原图）：
+                     把照片（如 xiaoluo.jpg）放进 images 文件夹，
+                     然后把下面这行的 src 改成 src="images/xiaoluo.jpg"。
+                 注意：照片建议使用正方形图片（如 400×400 像素），
+                       显示时会被自动裁剪为圆形。
+                 ====================================================== -->
+            <img class="avatar" src="images/member1.png" alt="小罗的个人照片（当前为占位示例图）">
+            <h1>小罗</h1>
+            <p class="stu-id">学号：SA225</p>
+        </div>
+    </header>
+
+    <!-- ========== 正文 ========== -->
+    <div class="container content">
+
+        <!-- 个人简介 -->
+        <section class="card">
+            <h2>个人简介</h2>
+            <p id="bio-text">
+                大家好，我是小罗，来自风景秀丽的江西，目前就读于网络空间安全学院
+                <span class="accent">网安一班</span>。我的 MBTI 是
+                <span class="accent">INFP</span>，性格安静内敛，做事专注，
+                喜欢在自己感兴趣的领域里深入钻研。
+            </p>
+            <ul class="info-list" style="margin-top:14px;">
+                <li><span class="info-label">姓名</span>小罗</li>
+                <li><span class="info-label">学号</span>SA225</li>
+                <li><span class="info-label">家乡</span>江西</li>
+                <li><span class="info-label">班级</span>网络空间安全学院 网安一班</li>
+                <li><span class="info-label">MBTI</span>INFP（调停者型）</li>
+            </ul>
+        </section>
+
+        <!-- 爱好与兴趣 -->
+        <section class="card">
+            <h2>爱好与兴趣</h2>
+            <p>
+                课余时间我喜欢两类事情：一是<span class="accent">球类运动</span>，
+                在球场上奔跑可以释放学习压力，也能培养团队配合的默契；二是听
+                <span class="accent">Jazz（爵士乐）</span>，舒缓自由的旋律能让我快速放松、
+                重新集中注意力。
+            </p>
+            <!-- ======================================================
+                 【爱好配图替换方法】
+                 把真实照片放进 images 文件夹（建议横向 4:3 比例，
+                 如 800×600 像素），然后修改下面两个 <img> 的 src：
+                   第 1 张：球类运动照片，例如 src="images/my-ball.jpg"
+                   第 2 张：爵士乐相关照片，例如 src="images/my-jazz.jpg"
+                 也可直接覆盖同名文件 hobby-ball.svg / hobby-jazz.svg。
+                 图片格式 jpg / png / webp / svg 均支持。
+                 ====================================================== -->
+            <div class="gallery">
+                <figure>
+                    <img src="images/hobby-ball.svg" alt="球类运动示意图">
+                    <figcaption>球类运动 —— 热爱球场，享受挥洒汗水的时刻</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/hobby-jazz.svg" alt="爵士乐示意图">
+                    <figcaption>Jazz 爵士乐 —— 在旋律里放松与思考</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- 职业技能发展规划 -->
+        <section class="card">
+            <h2>职业技能发展规划</h2>
+            <p>
+                围绕人工智能应用开发方向，我为自己制定了清晰的短期与长期目标，
+                并在 <a class="link" href="skills.html#xiaoluo">职业技能页面</a> 中列出了对应的能力清单。
+            </p>
+            <div class="plan-grid">
+                <div class="plan-card plan-short">
+                    <h3>短期目标</h3>
+                    <p>
+                        系统打好深度学习基础，掌握 Agent 开发相关技术栈，
+                        争取成为一名 <strong>Agent 开发实习生</strong>，在真实项目中积累工程经验。
+                    </p>
+                </div>
+                <div class="plan-card plan-long">
+                    <h3>长期目标</h3>
+                    <p>
+                        持续深耕 AI Agent 与网络安全的交叉领域，成长为能独当一面的技术人才，
+                        毕业后进入大厂，<strong>冲击百万年薪 offer</strong>。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式与导航 -->
+        <section class="card">
+            <h2>联系方式与页面导航</h2>
+            <ul class="info-list">
+                <li>
+                    <span class="info-label">电子邮箱</span>
+                    <a class="link" href="mailto:123456@qq.com">123456@qq.com</a>
+                </li>
+                <li>
+                    <span class="info-label">团队页面</span>
+                    <a class="link" href="index.html">返回团队介绍首页</a>
+                </li>
+                <li>
+                    <span class="info-label">职业技能</span>
+                    <a class="link" href="skills.html#xiaoluo">查看我的硬技能与软技能清单</a>
+                </li>
+            </ul>
+            <p style="margin-top:14px; font-size:13px; color:#94a3b8;">
+                小提示：点击浏览器邮件链接会自动唤起默认邮件客户端。
+            </p>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <p class="stu-id" style="color:#94a3b8 !important; font-size:13px;">© 2026 小罗 · SA225 · 个人主页</p>
+    </footer>
+
+</body>
+</html>
