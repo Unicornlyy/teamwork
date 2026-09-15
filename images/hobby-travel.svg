@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 爱好示意图：旅行/户外（SVG 矢量图，可替换为真实照片） -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="55%" stop-color="#fca5a5"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="600" fill="url(#sky)"/>
+
+  <!-- 太阳 -->
+  <circle cx="560" cy="230" r="60" fill="#fde68a" opacity="0.95"/>
+  <circle cx="560" cy="230" r="84" fill="#fde68a" opacity="0.25"/>
+
+  <!-- 云朵 -->
+  <g fill="#ffffff" opacity="0.85">
+    <ellipse cx="180" cy="130" rx="70" ry="26"/>
+    <ellipse cx="230" cy="118" rx="50" ry="22"/>
+  </g>
+
+  <!-- 远山 -->
+  <path d="M0 420 L150 250 L260 360 L380 210 L520 380 L640 280 L800 400 L800 600 L0 600 Z"
+        fill="#6366f1" opacity="0.55"/>
+  <!-- 近山 -->
+  <path d="M0 480 L120 360 L240 460 L360 340 L500 470 L620 390 L800 470 L800 600 L0 600 Z"
+        fill="#312e81" opacity="0.8"/>
+
+  <!-- 热气球 -->
+  <g transform="translate(230 220)">
+    <path d="M0 -120 C-70 -120 -80 -40 -40 10 L40 10 C80 -40 70 -120 0 -120 Z" fill="#f472b6"/>
+    <path d="M0 -120 C-30 -120 -34 -40 -16 10 L16 10 C34 -40 30 -120 0 -120 Z" fill="#fde68a"/>
+    <path d="M-40 10 L-14 10 M40 10 L14 10" stroke="#7c2d12" stroke-width="3"/>
+    <rect x="-20" y="14" width="40" height="28" rx="6" fill="#92400e"/>
+  </g>
+
+  <!-- 小路 -->
+  <path d="M360 600 Q400 520 400 470 Q400 440 380 420" stroke="#fef3c7" stroke-width="14"
+        fill="none" opacity="0.8" stroke-linecap="round" stroke-dasharray="2 26"/>
+
+  <text x="400" y="560" text-anchor="middle" font-family="Microsoft YaHei, sans-serif"
+        font-size="46" font-weight="bold" fill="#eef2ff" letter-spacing="10">旅 行 · 户 外</text>
+</svg>

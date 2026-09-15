@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 爱好示意图：爵士舞 Jazz Dance（SVG 矢量图，可替换为真实照片） -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="50%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#f0abfc" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#f0abfc" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="600" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#spot)"/>
+
+  <!-- 星星点点 -->
+  <g fill="#fce7f3" opacity="0.8">
+    <circle cx="120" cy="90" r="3"/>
+    <circle cx="690" cy="120" r="4"/>
+    <circle cx="620" cy="60" r="2.5"/>
+    <circle cx="200" cy="150" r="2.5"/>
+    <circle cx="90" cy="300" r="3"/>
+    <circle cx="720" cy="320" r="3"/>
+  </g>
+
+  <!-- 飘动音符 -->
+  <g fill="#f0abfc" opacity="0.85">
+    <g transform="translate(140,250) scale(1)">
+      <ellipse cx="0" cy="34" rx="26" ry="19"/>
+      <rect x="23" y="-50" width="7" height="86"/>
+      <path d="M30 -50 Q62 -36 30 -12 Z"/>
+    </g>
+    <g transform="translate(620,230) scale(0.85)">
+      <ellipse cx="0" cy="34" rx="26" ry="19"/>
+      <rect x="23" y="-50" width="7" height="86"/>
+      <path d="M30 -50 Q62 -36 30 -12 Z"/>
+    </g>
+  </g>
+
+  <!-- 舞者剪影：头 -->
+  <circle cx="400" cy="150" r="34" fill="#fbcfe8"/>
+  <!-- 头发 -->
+  <path d="M366 146 Q360 108 400 106 Q442 106 436 150 Q430 128 400 128 Q372 128 366 146 Z" fill="#831843"/>
+  <!-- 身体（舞动的躯干） -->
+  <path d="M388 182 Q400 172 414 180 L424 280 Q414 294 400 294 Q386 294 378 280 Z" fill="#f472b6"/>
+  <!-- 裙摆 -->
+  <path d="M372 272 Q400 262 430 272 L470 348 Q400 330 332 348 Z" fill="#ec4899"/>
+  <!-- 左手上扬 -->
+  <path d="M388 190 Q350 150 322 96 Q314 82 324 76 Q336 82 348 118 Q372 164 398 182 Z" fill="#fbcfe8"/>
+  <!-- 右手侧展 -->
+  <path d="M412 186 Q462 176 496 142 Q508 130 500 120 Q488 122 462 146 Q432 168 404 178 Z" fill="#fbcfe8"/>
+  <!-- 左腿 -->
+  <path d="M388 292 Q372 360 340 430 Q330 452 342 458 Q356 452 372 414 Q392 360 402 300 Z" fill="#a21caf"/>
+  <!-- 右腿 -->
+  <path d="M412 294 Q436 352 468 404 Q482 428 470 436 Q456 432 438 400 Q416 356 400 300 Z" fill="#86198f"/>
+  <!-- 舞台地面与倒影 -->
+  <ellipse cx="400" cy="470" rx="200" ry="18" fill="#000000" opacity="0.25"/>
+
+  <text x="400" y="536" text-anchor="middle" font-family="Georgia, serif" font-style="italic"
+        font-size="64" font-weight="bold" fill="#fbcfe8">JAZZ DANCE</text>
+  <text x="400" y="578" text-anchor="middle" font-family="Microsoft YaHei, sans-serif"
+        font-size="24" fill="#f5d0fe" letter-spacing="8" opacity="0.9">律 动 · 自 信 · 释 放</text>
+</svg>

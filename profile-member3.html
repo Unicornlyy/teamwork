@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <!--
   ==========================================================================
-  成员 3 个人主页 —— 占位模板（使用前请按以下清单替换全部【】内容）
-  --------------------------------------------------------------------------
-  □ 1. 头像：把本人正方形照片命名为 member3.png，覆盖 images/member3.png
-  □ 2. 全文搜索【成员3姓名】替换为真实姓名（共约 6 处）
-  □ 3. 把【学号】【邮箱地址】【家乡】【班级】【性格/MBTI】替换为真实信息
-  □ 4. “个人简介”段落改成自己的介绍
-  □ 5. “爱好与兴趣”：替换文字，并把灰色占位框换成 <img> 图片
-       （写法见注释，图片放进 images 文件夹）
-  □ 6. “职业技能发展规划”：替换短期、长期目标
-  □ 7. 联系方式中的邮箱：同时替换 mailto: 后面的地址和显示的文字
-  □ 8. 最后把本文件重命名为 profile-姓名拼音.html，更直观（可选）
+  成员 3 个人主页 —— 徐文强（SA26225384）
+  头像替换：把本人正方形照片命名为 member3.png，覆盖 images/member3.png 即可
   ==========================================================================
 -->
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【成员3姓名】 - 个人主页</title>
+    <title>徐文强 - 个人主页</title>
     <!-- 外部 CSS 样式表 -->
     <link rel="stylesheet" href="css/style.css">
     <!-- 页面内部内嵌 CSS：ID 选择器 + 标题样式 + 上下文选择器 -->
@@ -57,19 +48,18 @@
     <!-- ========== 顶部横幅：照片 + 姓名 + 学号 ========== -->
     <header class="header">
         <nav class="nav">
-            <span class="nav-brand">【成员3姓名】的个人主页</span>
+            <span class="nav-brand">徐文强的个人主页</span>
             <div class="nav-links">
                 <a class="link" href="index.html">团队页面</a>
                 <a class="link" href="skills.html#member3">职业技能页面</a>
-                <!-- 替换邮箱：把 mailto: 后的地址改成自己的邮箱 -->
-                <a class="link" href="mailto:【邮箱地址】">电子邮箱</a>
+                <a class="link" href="mailto:xwq3337@gmail.com">电子邮箱</a>
             </div>
         </nav>
         <div class="hero">
             <!-- 头像替换：用本人照片覆盖 images/member3.png（建议正方形）即可 -->
-            <img class="avatar" src="images/member3.png" alt="【成员3姓名】的个人照片（当前为占位示例图）">
-            <h1>【成员3姓名】</h1>
-            <p class="stu-id">学号：【学号】</p>
+            <img class="avatar" src="images/member3.png" alt="徐文强的个人照片（当前为占位示例图）">
+            <h1>徐文强</h1>
+            <p class="stu-id">学号：SA26225384</p>
         </div>
     </header>
 
@@ -80,15 +70,18 @@
         <section class="card">
             <h2>个人简介</h2>
             <p id="bio-text">
-                【在此填写个人背景介绍，2～3 句话即可。例如：大家好，我是……
-                来自……，就读于……专业/班级，性格……平时喜欢……】
+                大家好，我是徐文强，来自
+                <span class="accent">湖北荆门</span>，目前就读于
+                <span class="accent">大数据与人工智能专业 2 班</span>。
+                我的 MBTI 是 <span class="accent">ISTP</span>，性格偏内向，
+                喜欢动手实践、钻研工具与技术本身，享受把一个程序调通、跑起来的成就感。
             </p>
             <ul class="info-list" style="margin-top:14px;">
-                <li><span class="info-label">姓名</span>【成员3姓名】</li>
-                <li><span class="info-label">学号</span>【学号】</li>
-                <li><span class="info-label">家乡</span>【家乡】</li>
-                <li><span class="info-label">班级</span>【年级 / 专业 / 班级】</li>
-                <li><span class="info-label">性格</span>【性格特点或 MBTI】</li>
+                <li><span class="info-label">姓名</span>徐文强</li>
+                <li><span class="info-label">学号</span>SA26225384</li>
+                <li><span class="info-label">家乡</span>湖北荆门</li>
+                <li><span class="info-label">班级</span>大数据与人工智能专业 2 班</li>
+                <li><span class="info-label">MBTI</span>ISTP（鉴赏家型）</li>
             </ul>
         </section>
 
@@ -96,31 +89,23 @@
         <section class="card">
             <h2>爱好与兴趣</h2>
             <p>
-                【在此介绍自己的爱好与兴趣，例如：课余时间我喜欢……
-                它让我收获了……】
+                我喜欢<span class="accent">游泳</span>，水下滑行的节奏感让我专注放松；
+                平时也坚持<span class="accent">健身</span>，保持状态和自律。
+                放松时会打<span class="accent">游戏</span>，既当娱乐，也会好奇游戏背后的技术实现。
             </p>
             <!--
               爱好配图替换方法：
-              把灰色占位框 <div class="photo-placeholder">...</div> 整段替换为：
-                <img src="images/你的图片文件名.jpg" alt="图片说明">
-              例如：
-                <figure>
-                    <img src="images/my-photo.jpg" alt="旅行照片">
-                    <figcaption>旅行 —— 用脚步丈量世界</figcaption>
-                </figure>
+              把真实照片放进 images 文件夹，然后修改下面两个 <img> 的 src 即可，
+              例如 src="images/my-swim.jpg"、src="images/my-game.jpg"
             -->
             <div class="gallery">
                 <figure>
-                    <div class="photo-placeholder">
-                        【爱好配图 1】<br>替换方法见本文件上方注释
-                    </div>
-                    <figcaption>【爱好名称 1】—— 【一句话描述】</figcaption>
+                    <img src="images/hobby-swim.svg" alt="游泳示意图">
+                    <figcaption>游泳 —— 在水中保持节奏与专注</figcaption>
                 </figure>
                 <figure>
-                    <div class="photo-placeholder">
-                        【爱好配图 2】<br>替换方法见本文件上方注释
-                    </div>
-                    <figcaption>【爱好名称 2】—— 【一句话描述】</figcaption>
+                    <img src="images/hobby-game.svg" alt="游戏示意图">
+                    <figcaption>游戏 —— 放松之余，也好奇背后的技术实现</figcaption>
                 </figure>
             </div>
         </section>
@@ -129,21 +114,24 @@
         <section class="card">
             <h2>职业技能发展规划</h2>
             <p>
-                【一句话引出自己的规划，例如：围绕……方向，我制定了以下短期与长期目标。】
+                我希望走<span class="accent">工程与算法结合</span>的路线，
+                具体能力清单见 <a class="link" href="skills.html#member3">职业技能页面</a>。
             </p>
             <div class="plan-grid">
                 <div class="plan-card plan-short">
                     <h3>短期目标</h3>
                     <p>
-                        【填写短期目标，例如本学期/本学年要掌握的技能、
-                        要参加的比赛或实习，1～2 句话】
+                        认真学习专业课程，打好<strong>大模型算法理论基础</strong>
+                        （机器学习、深度学习、Transformer 等），同时提升 Python / Go / Rust 的工程开发熟练度，
+                        积极参与团队项目与开源实践，把代码写得规范、可靠。
                     </p>
                 </div>
                 <div class="plan-card plan-long">
                     <h3>长期目标</h3>
                     <p>
-                        【填写长期目标，例如毕业后的就业方向、希望进入的行业
-                        或成为什么样的人才，1～2 句话】
+                        成为一名<strong>优秀的程序员</strong>，能熟练运用 AI 工具与大模型能力
+                        提升自身开发效率与竞争力，在大数据与人工智能领域持续成长，
+                        获得不错的职业发展与收入。
                     </p>
                 </div>
             </div>
@@ -155,8 +143,7 @@
             <ul class="info-list">
                 <li>
                     <span class="info-label">电子邮箱</span>
-                    <!-- mailto: 后的地址与显示文字都要替换 -->
-                    <a class="link" href="mailto:【邮箱地址】">【邮箱地址】</a>
+                    <a class="link" href="mailto:xwq3337@gmail.com">xwq3337@gmail.com</a>
                 </li>
                 <li>
                     <span class="info-label">团队页面</span>
@@ -172,7 +159,7 @@
     </div>
 
     <footer class="footer">
-        <p class="stu-id" style="color:#94a3b8 !important;">© 2026 【成员3姓名】 · 【学号】 · 个人主页</p>
+        <p class="stu-id" style="color:#94a3b8 !important;">© 2026 徐文强 · SA26225384 · 个人主页</p>
     </footer>
 
 </body>

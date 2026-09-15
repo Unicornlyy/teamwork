@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 爱好示意图：健身撸铁（SVG 矢量图，可替换为真实照片） -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="600" fill="url(#bg)"/>
+
+  <!-- 健身房地面光带 -->
+  <rect x="0" y="440" width="800" height="160" fill="#020617" opacity="0.45"/>
+  <g stroke="#818cf8" stroke-opacity="0.18" stroke-width="3">
+    <line x1="0" y1="470" x2="800" y2="470"/>
+    <line x1="120" y1="600" x2="360" y2="470"/>
+    <line x1="680" y1="600" x2="440" y2="470"/>
+  </g>
+
+  <!-- 哑铃（横放居中） -->
+  <g>
+    <!-- 中间握杆 -->
+    <rect x="250" y="278" width="300" height="44" rx="10" fill="url(#bar)"/>
+    <!-- 左侧卡箍 -->
+    <rect x="238" y="266" width="18" height="68" rx="4" fill="#475569"/>
+    <rect x="544" y="266" width="18" height="68" rx="4" fill="#475569"/>
+    <!-- 左侧铃片 -->
+    <rect x="150" y="232" width="34" height="136" rx="8" fill="url(#plate)"/>
+    <rect x="188" y="250" width="30" height="100" rx="6" fill="#7c3aed"/>
+    <rect x="218" y="262" width="22" height="76" rx="5" fill="#5b21b6"/>
+    <!-- 右侧铃片 -->
+    <rect x="616" y="232" width="34" height="136" rx="8" fill="url(#plate)"/>
+    <rect x="582" y="250" width="30" height="100" rx="6" fill="#7c3aed"/>
+    <rect x="560" y="262" width="22" height="76" rx="5" fill="#5b21b6"/>
+    <!-- 高光 -->
+    <rect x="158" y="240" width="6" height="120" rx="3" fill="#ffffff" opacity="0.35"/>
+    <rect x="624" y="240" width="6" height="120" rx="3" fill="#ffffff" opacity="0.35"/>
+  </g>
+
+  <!-- 装饰小哑铃图标 -->
+  <g transform="translate(640,110) rotate(20)" opacity="0.5">
+    <rect x="0" y="8" width="90" height="14" rx="4" fill="#94a3b8"/>
+    <rect x="-18" y="-4" width="14" height="38" rx="3" fill="#a78bfa"/>
+    <rect x="94" y="-4" width="14" height="38" rx="3" fill="#a78bfa"/>
+  </g>
+
+  <text x="400" y="536" text-anchor="middle" font-family="Microsoft YaHei, sans-serif"
+        font-size="56" font-weight="bold" fill="#c4b5fd" letter-spacing="10">健 身 · 撸 铁</text>
+  <text x="400" y="578" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22" fill="#a5b4fc" letter-spacing="6" opacity="0.9">FITNESS &amp; WORKOUT</text>
+</svg>

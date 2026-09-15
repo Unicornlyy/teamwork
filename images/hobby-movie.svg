@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 爱好示意图：电影（致敬《星际穿越》的黑洞与星空，SVG 矢量图，可替换为真实电影海报） -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="space" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="60%" stop-color="#0b1026"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+    <radialGradient id="hole" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="78%" stop-color="#000000"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </radialGradient>
+    <linearGradient id="disk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="35%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#fde68a"/>
+      <stop offset="65%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="600" fill="url(#space)"/>
+
+  <!-- 星空 -->
+  <g fill="#ffffff">
+    <circle cx="90" cy="80" r="2.5" opacity="0.9"/>
+    <circle cx="180" cy="150" r="1.8" opacity="0.7"/>
+    <circle cx="700" cy="70" r="2.2" opacity="0.85"/>
+    <circle cx="640" cy="160" r="1.6" opacity="0.6"/>
+    <circle cx="120" cy="330" r="2" opacity="0.7"/>
+    <circle cx="720" cy="360" r="2.4" opacity="0.9"/>
+    <circle cx="80" cy="470" r="1.6" opacity="0.6"/>
+    <circle cx="710" cy="490" r="1.8" opacity="0.7"/>
+    <circle cx="260" cy="70" r="1.4" opacity="0.6"/>
+    <circle cx="560" cy="60" r="1.8" opacity="0.75"/>
+  </g>
+
+  <!-- 吸积盘（上半圈，绕到黑洞后面） -->
+  <g transform="translate(400 270)">
+    <ellipse cx="0" cy="0" rx="300" ry="78" fill="none" stroke="url(#disk)" stroke-width="30"
+             stroke-dasharray="942 1884" transform="rotate(14)" opacity="0.95"/>
+    <!-- 下半圈 -->
+    <ellipse cx="0" cy="0" rx="300" ry="78" fill="none" stroke="url(#disk)" stroke-width="30"
+             stroke-dasharray="942 1884" stroke-dashoffset="-942" transform="rotate(14)" opacity="0.95"/>
+    <!-- 黑洞本体 -->
+    <circle cx="0" cy="0" r="118" fill="url(#hole)"/>
+    <circle cx="0" cy="0" r="118" fill="none" stroke="#312e81" stroke-width="4" opacity="0.8"/>
+  </g>
+
+  <!-- 小星球 -->
+  <circle cx="130" cy="430" r="22" fill="#6366f1"/>
+  <ellipse cx="130" cy="430" rx="38" ry="8" fill="none" stroke="#a5b4fc" stroke-width="4"
+           transform="rotate(-18 130 430)" opacity="0.8"/>
+
+  <text x="400" y="506" text-anchor="middle" font-family="Georgia, serif" font-style="italic"
+        font-size="40" fill="#fde68a" letter-spacing="4">爱是唯一可以穿越时空的事物</text>
+  <text x="400" y="558" text-anchor="middle" font-family="Microsoft YaHei, sans-serif"
+        font-size="30" font-weight="bold" fill="#c4b5fd" letter-spacing="12">电 影 · 星 际 穿 越</text>
+</svg>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 爱好示意图：游泳（SVG 矢量图，可替换为真实照片） -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="pool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 天空 -->
+  <rect x="0" y="0" width="800" height="230" fill="url(#sky)"/>
+  <!-- 太阳 -->
+  <circle cx="660" cy="90" r="46" fill="#fde047" opacity="0.95"/>
+  <circle cx="660" cy="90" r="60" fill="#fde047" opacity="0.25"/>
+
+  <!-- 泳池水面 -->
+  <rect x="0" y="230" width="800" height="370" fill="url(#pool)"/>
+
+  <!-- 泳道线 -->
+  <g stroke="#ffffff" stroke-width="6" stroke-dasharray="26 22" opacity="0.55">
+    <line x1="0" y1="330" x2="800" y2="330"/>
+    <line x1="0" y1="430" x2="800" y2="430"/>
+    <line x1="0" y1="530" x2="800" y2="530"/>
+  </g>
+  <!-- 水波纹 -->
+  <g stroke="#bae6fd" stroke-width="4" opacity="0.5" fill="none">
+    <path d="M80 290 q25 -10 50 0 t50 0"/>
+    <path d="M560 390 q25 -10 50 0 t50 0"/>
+    <path d="M200 490 q25 -10 50 0 t50 0"/>
+  </g>
+
+  <!-- 游泳者（自由泳侧影） -->
+  <g transform="translate(400 360)">
+    <!-- 身体 -->
+    <path d="M-120 10 Q-40 -30 60 -6 Q120 8 150 0" fill="none" stroke="#f59e0b"
+          stroke-width="34" stroke-linecap="round"/>
+    <!-- 头 -->
+    <circle cx="160" cy="-12" r="24" fill="#fbbf24"/>
+    <!-- 泳镜 -->
+    <path d="M150 -22 q14 -8 26 0" stroke="#0f172a" stroke-width="4" fill="none"/>
+    <!-- 前伸手臂 -->
+    <path d="M150 -6 Q190 -34 236 -30" fill="none" stroke="#fbbf24" stroke-width="18" stroke-linecap="round"/>
+    <!-- 后划手臂 -->
+    <path d="M-60 0 Q-120 -40 -160 -10" fill="none" stroke="#fbbf24" stroke-width="18" stroke-linecap="round"/>
+    <!-- 打腿水花 -->
+    <path d="M-150 6 q-20 -14 -40 -4 M-140 20 q-24 -6 -38 8" stroke="#ffffff" stroke-width="5"
+          fill="none" opacity="0.85" stroke-linecap="round"/>
+  </g>
+
+  <!-- 气泡 -->
+  <g fill="#e0f2fe" opacity="0.8">
+    <circle cx="580" cy="330" r="6"/>
+    <circle cx="610" cy="300" r="4"/>
+    <circle cx="250" cy="400" r="5"/>
+    <circle cx="220" cy="372" r="3.5"/>
+  </g>
+
+  <text x="400" y="130" text-anchor="middle" font-family="Microsoft YaHei, sans-serif"
+        font-size="52" font-weight="bold" fill="#0c4a6e" letter-spacing="12">游 泳</text>
+  <text x="400" y="172" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22" fill="#0369a1" letter-spacing="6">SWIMMING</text>
+</svg>

@@ -3,9 +3,7 @@
   ==========================================================================
   职业技能页面（全团队共用一个页面，按成员分区）
   --------------------------------------------------------------------------
-  【替换指引】
-  □ 成员 2～4 的内容全部用【】标注，替换时直接搜索【逐个修改即可
-  □ 技能条百分比只代表当前熟练度，请按本人实际情况修改 width: 百分比
+  □ 技能条百分比只代表当前熟练度，可按本人实际情况修改 width: 百分比
   □ 本页按要求大量使用“行内 CSS 样式”（直接写在元素 style="..." 里），
     美化文字颜色、字号、间距、背景色等，请勿删除这些 style 属性
   □ 如需增加技能，复制一行 <div class="skill-row">...</div> 即可
@@ -69,10 +67,10 @@
             <span class="nav-brand">职业技能页面</span>
             <div class="nav-links">
                 <a class="link" href="index.html">团队页面</a>
-                <a class="link" href="profile-xiaoluo.html">小罗主页</a>
-                <a class="link" href="profile-member2.html">成员2</a>
-                <a class="link" href="profile-member3.html">成员3</a>
-                <a class="link" href="profile-member4.html">成员4</a>
+                <a class="link" href="profile-xiaoluo.html">罗依婧</a>
+                <a class="link" href="profile-member2.html">徐世华</a>
+                <a class="link" href="profile-member3.html">徐文强</a>
+                <a class="link" href="profile-member4.html">王丰源</a>
             </div>
         </nav>
         <div class="hero" style="padding-top:30px;">
@@ -90,10 +88,10 @@
 
         <!-- 成员快速导航 -->
         <div class="member-nav">
-            <a class="member-pill" href="#xiaoluo">小罗 · SA225</a>
-            <a class="member-pill" href="#member2">【成员2姓名】</a>
-            <a class="member-pill" href="#member3">【成员3姓名】</a>
-            <a class="member-pill" href="#member4">【成员4姓名】</a>
+            <a class="member-pill" href="#xiaoluo">罗依婧 · SA26225245</a>
+            <a class="member-pill" href="#member2">徐世华 · SA26225382</a>
+            <a class="member-pill" href="#member3">徐文强 · SA26225384</a>
+            <a class="member-pill" href="#member4">王丰源 · SA26225312</a>
         </div>
 
         <!-- 概念说明 -->
@@ -109,15 +107,15 @@
         </section>
 
         <!-- ========================================================
-             成员 1：小罗（真实资料）
+             成员 1：罗依婧（SA26225245）
              ======================================================== -->
         <section id="xiaoluo" class="card member-section" style="border-top:3px solid #6366f1;">
             <div class="member-title">
-                <img src="images/member1.png" alt="小罗头像">
+                <img src="images/member1.png" alt="罗依婧头像">
                 <div>
-                    <h2 style="border:none; padding:0; margin:0; color:#1e293b; font-size:20px; font-weight:700;">小罗</h2>
+                    <h2 style="border:none; padding:0; margin:0; color:#1e293b; font-size:20px; font-weight:700;">罗依婧</h2>
                     <p style="margin:2px 0 0; color:#94a3b8; font-size:13px; letter-spacing:1px;">
-                        学号：SA225 ｜ 目标岗位：Agent 开发实习生 → AI 应用开发工程师
+                        学号：SA26225245 ｜ 目标岗位：Agent 开发实习生 → AI 应用开发工程师
                     </p>
                 </div>
                 <a class="link" href="profile-xiaoluo.html" style="margin-left:auto; font-size:13px;">查看个人主页 →</a>
@@ -135,6 +133,16 @@
                 </div>
                 <div class="skill-track">
                     <div class="skill-fill" style="width:80%; background:linear-gradient(90deg,#818cf8,#6366f1);"></div>
+                </div>
+            </div>
+
+            <div class="skill-row">
+                <div class="skill-meta">
+                    <span style="font-weight:600; color:#1e293b; font-size:14px;">C 语言</span>
+                    <span style="color:#6366f1; font-weight:600; font-size:13px;">掌握基础 · 65%</span>
+                </div>
+                <div class="skill-track">
+                    <div class="skill-fill" style="width:65%; background:linear-gradient(90deg,#818cf8,#6366f1);"></div>
                 </div>
             </div>
 
@@ -177,15 +185,15 @@
         </section>
 
         <!-- ========================================================
-             成员 2（占位模板，替换【】即可）
+             成员 2：徐世华（SA26225382）
              ======================================================== -->
         <section id="member2" class="card member-section" style="border-top:3px solid #8b5cf6;">
             <div class="member-title">
-                <img src="images/member2.png" alt="【成员2姓名】头像">
+                <img src="images/member2.png" alt="徐世华头像">
                 <div>
-                    <h2 style="border:none; padding:0; margin:0; color:#1e293b; font-size:20px; font-weight:700;">【成员2姓名】</h2>
+                    <h2 style="border:none; padding:0; margin:0; color:#1e293b; font-size:20px; font-weight:700;">徐世华</h2>
                     <p style="margin:2px 0 0; color:#94a3b8; font-size:13px; letter-spacing:1px;">
-                        学号：【学号】 ｜ 目标岗位：【目标岗位 / 方向】
+                        学号：SA26225382 ｜ 目标岗位：量化交易 / 大模型算法工程师
                     </p>
                 </div>
                 <a class="link" href="profile-member2.html" style="margin-left:auto; font-size:13px;">查看个人主页 →</a>
@@ -195,47 +203,64 @@
                 硬技能（技术 / 专业能力）
             </h3>
 
-            <!-- 复制下面这一整行即可增加一项硬技能；width 百分比按实际熟练度修改 -->
             <div class="skill-row">
                 <div class="skill-meta">
-                    <span style="font-weight:600; color:#1e293b; font-size:14px;">【硬技能 1，如：Java 编程】</span>
-                    <span style="color:#6d28d9; font-weight:600; font-size:13px;">【熟练度，如：掌握】 · 60%</span>
+                    <span style="font-weight:600; color:#1e293b; font-size:14px;">C 语言</span>
+                    <span style="color:#6d28d9; font-weight:600; font-size:13px;">掌握 · 65%</span>
                 </div>
                 <div class="skill-track">
-                    <div class="skill-fill" style="width:60%; background:linear-gradient(90deg,#a78bfa,#8b5cf6);"></div>
+                    <div class="skill-fill" style="width:65%; background:linear-gradient(90deg,#a78bfa,#8b5cf6);"></div>
                 </div>
             </div>
 
             <div class="skill-row">
                 <div class="skill-meta">
-                    <span style="font-weight:600; color:#1e293b; font-size:14px;">【硬技能 2，如：数据分析】</span>
-                    <span style="color:#6d28d9; font-weight:600; font-size:13px;">【熟练度】 · 50%</span>
+                    <span style="font-weight:600; color:#1e293b; font-size:14px;">C++ 编程</span>
+                    <span style="color:#f59e0b; font-weight:600; font-size:13px;">学习中 · 35%</span>
                 </div>
                 <div class="skill-track">
-                    <div class="skill-fill" style="width:50%; background:linear-gradient(90deg,#a78bfa,#8b5cf6);"></div>
+                    <div class="skill-fill" style="width:35%; background:linear-gradient(90deg,#fbbf24,#f59e0b);"></div>
                 </div>
             </div>
+
+            <div class="skill-row">
+                <div class="skill-meta">
+                    <span style="font-weight:600; color:#1e293b; font-size:14px;">数据结构与算法</span>
+                    <span style="color:#f59e0b; font-weight:600; font-size:13px;">学习中 · 40%</span>
+                </div>
+                <div class="skill-track">
+                    <div class="skill-fill" style="width:40%; background:linear-gradient(90deg,#fbbf24,#f59e0b);"></div>
+                </div>
+            </div>
+
+            <p style="margin-top:14px; font-size:13px; color:#94a3b8; line-height:1.8;">
+                跨考上岸，正在系统补齐计算机专业基础，并同步巩固数学功底（概率论、线代、数理统计），
+                为量化与大模型算法方向打基础。
+            </p>
 
             <h3 style="color:#1e293b; font-size:15px; font-weight:600; margin:26px 0 10px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">
                 软技能（人际 / 通用能力）
             </h3>
             <div class="soft-tags">
-                <!-- 增加软技能：复制一个 span，修改文字即可 -->
-                <span class="tag" style="background:#f5f3ff; color:#7c3aed; border-color:#ddd6fe;">【软技能 1，如：沟通表达】</span>
-                <span class="tag" style="background:#f5f3ff; color:#7c3aed; border-color:#ddd6fe;">【软技能 2，如：问题解决】</span>
+                <span class="tag" style="background:#f5f3ff; color:#7c3aed; border-color:#ddd6fe;">团队配合</span>
+                <span class="tag" style="background:#f5f3ff; color:#7c3aed; border-color:#ddd6fe;">时间管理</span>
+                <span class="tag" style="background:#f5f3ff; color:#7c3aed; border-color:#ddd6fe;">踏实肯学</span>
             </div>
+            <p style="margin-top:12px; font-size:13px; color:#94a3b8; line-height:1.8;">
+                能够积极配合团队工作，学习和任务安排有计划性，时间管理不错。
+            </p>
         </section>
 
         <!-- ========================================================
-             成员 3（占位模板）
+             成员 3：徐文强（SA26225384）
              ======================================================== -->
         <section id="member3" class="card member-section" style="border-top:3px solid #f59e0b;">
             <div class="member-title">
-                <img src="images/member3.png" alt="【成员3姓名】头像">
+                <img src="images/member3.png" alt="徐文强头像">
                 <div>
-                    <h2 style="border:none; padding:0; margin:0; color:#1e293b; font-size:20px; font-weight:700;">【成员3姓名】</h2>
+                    <h2 style="border:none; padding:0; margin:0; color:#1e293b; font-size:20px; font-weight:700;">徐文强</h2>
                     <p style="margin:2px 0 0; color:#94a3b8; font-size:13px; letter-spacing:1px;">
-                        学号：【学号】 ｜ 目标岗位：【目标岗位 / 方向】
+                        学号：SA26225384 ｜ 目标岗位：大模型算法 / 后端开发工程师
                     </p>
                 </div>
                 <a class="link" href="profile-member3.html" style="margin-left:auto; font-size:13px;">查看个人主页 →</a>
@@ -247,43 +272,81 @@
 
             <div class="skill-row">
                 <div class="skill-meta">
-                    <span style="font-weight:600; color:#1e293b; font-size:14px;">【硬技能 1】</span>
-                    <span style="color:#c2410c; font-weight:600; font-size:13px;">【熟练度】 · 60%</span>
+                    <span style="font-weight:600; color:#1e293b; font-size:14px;">Python</span>
+                    <span style="color:#c2410c; font-weight:600; font-size:13px;">掌握 · 75%</span>
                 </div>
                 <div class="skill-track">
-                    <div class="skill-fill" style="width:60%; background:linear-gradient(90deg,#fcd34d,#f59e0b);"></div>
+                    <div class="skill-fill" style="width:75%; background:linear-gradient(90deg,#fcd34d,#f59e0b);"></div>
                 </div>
             </div>
 
             <div class="skill-row">
                 <div class="skill-meta">
-                    <span style="font-weight:600; color:#1e293b; font-size:14px;">【硬技能 2】</span>
-                    <span style="color:#c2410c; font-weight:600; font-size:13px;">【熟练度】 · 50%</span>
+                    <span style="font-weight:600; color:#1e293b; font-size:14px;">Go 语言</span>
+                    <span style="color:#c2410c; font-weight:600; font-size:13px;">掌握 · 65%</span>
                 </div>
                 <div class="skill-track">
-                    <div class="skill-fill" style="width:50%; background:linear-gradient(90deg,#fcd34d,#f59e0b);"></div>
+                    <div class="skill-fill" style="width:65%; background:linear-gradient(90deg,#fcd34d,#f59e0b);"></div>
                 </div>
             </div>
+
+            <div class="skill-row">
+                <div class="skill-meta">
+                    <span style="font-weight:600; color:#1e293b; font-size:14px;">Rust</span>
+                    <span style="color:#c2410c; font-weight:600; font-size:13px;">掌握 · 55%</span>
+                </div>
+                <div class="skill-track">
+                    <div class="skill-fill" style="width:55%; background:linear-gradient(90deg,#fcd34d,#f59e0b);"></div>
+                </div>
+            </div>
+
+            <div class="skill-row">
+                <div class="skill-meta">
+                    <span style="font-weight:600; color:#1e293b; font-size:14px;">Git 版本管理</span>
+                    <span style="color:#c2410c; font-weight:600; font-size:13px;">熟练 · 80%</span>
+                </div>
+                <div class="skill-track">
+                    <div class="skill-fill" style="width:80%; background:linear-gradient(90deg,#fcd34d,#f59e0b);"></div>
+                </div>
+            </div>
+
+            <div class="skill-row">
+                <div class="skill-meta">
+                    <span style="font-weight:600; color:#1e293b; font-size:14px;">Linux 操作</span>
+                    <span style="color:#c2410c; font-weight:600; font-size:13px;">熟练 · 78%</span>
+                </div>
+                <div class="skill-track">
+                    <div class="skill-fill" style="width:78%; background:linear-gradient(90deg,#fcd34d,#f59e0b);"></div>
+                </div>
+            </div>
+
+            <p style="margin-top:14px; font-size:13px; color:#94a3b8; line-height:1.8;">
+                学习路径：夯实大模型算法理论基础 → 提升多语言工程开发熟练度 → 参与团队 / 开源项目沉淀实战经验。
+            </p>
 
             <h3 style="color:#1e293b; font-size:15px; font-weight:600; margin:26px 0 10px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">
                 软技能（人际 / 通用能力）
             </h3>
             <div class="soft-tags">
-                <span class="tag" style="background:#fffbeb; color:#b45309; border-color:#fcd34d;">【软技能 1】</span>
-                <span class="tag" style="background:#fffbeb; color:#b45309; border-color:#fcd34d;">【软技能 2】</span>
+                <span class="tag" style="background:#fffbeb; color:#b45309; border-color:#fcd34d;">沟通能力良好</span>
+                <span class="tag" style="background:#fffbeb; color:#b45309; border-color:#fcd34d;">长期团队开发经历</span>
+                <span class="tag" style="background:#fffbeb; color:#b45309; border-color:#fcd34d;">动手实践</span>
             </div>
+            <p style="margin-top:12px; font-size:13px; color:#94a3b8; line-height:1.8;">
+                具备良好的沟通能力，有长期的团队开发经历，能在协作中清晰表达、推进任务。
+            </p>
         </section>
 
         <!-- ========================================================
-             成员 4（占位模板）
+             成员 4：王丰源（SA26225312）
              ======================================================== -->
         <section id="member4" class="card member-section" style="border-top:3px solid #10b981;">
             <div class="member-title">
-                <img src="images/member4.png" alt="【成员4姓名】头像">
+                <img src="images/member4.png" alt="王丰源头像">
                 <div>
-                    <h2 style="border:none; padding:0; margin:0; color:#1e293b; font-size:20px; font-weight:700;">【成员4姓名】</h2>
+                    <h2 style="border:none; padding:0; margin:0; color:#1e293b; font-size:20px; font-weight:700;">王丰源</h2>
                     <p style="margin:2px 0 0; color:#94a3b8; font-size:13px; letter-spacing:1px;">
-                        学号：【学号】 ｜ 目标岗位：【目标岗位 / 方向】
+                        学号：SA26225312 ｜ 目标岗位：C++ 后端开发实习生 → 后端工程师
                     </p>
                 </div>
                 <a class="link" href="profile-member4.html" style="margin-left:auto; font-size:13px;">查看个人主页 →</a>
@@ -295,31 +358,50 @@
 
             <div class="skill-row">
                 <div class="skill-meta">
-                    <span style="font-weight:600; color:#1e293b; font-size:14px;">【硬技能 1】</span>
-                    <span style="color:#047857; font-weight:600; font-size:13px;">【熟练度】 · 60%</span>
+                    <span style="font-weight:600; color:#1e293b; font-size:14px;">C++ 编程</span>
+                    <span style="color:#f59e0b; font-weight:600; font-size:13px;">会用 · 夯实中 · 50%</span>
                 </div>
                 <div class="skill-track">
-                    <div class="skill-fill" style="width:60%; background:linear-gradient(90deg,#6ee7b7,#10b981);"></div>
+                    <div class="skill-fill" style="width:50%; background:linear-gradient(90deg,#fbbf24,#f59e0b);"></div>
                 </div>
             </div>
 
             <div class="skill-row">
                 <div class="skill-meta">
-                    <span style="font-weight:600; color:#1e293b; font-size:14px;">【硬技能 2】</span>
-                    <span style="color:#047857; font-weight:600; font-size:13px;">【熟练度】 · 50%</span>
+                    <span style="font-weight:600; color:#1e293b; font-size:14px;">算法基础</span>
+                    <span style="color:#f59e0b; font-weight:600; font-size:13px;">会用 · 夯实中 · 45%</span>
                 </div>
                 <div class="skill-track">
-                    <div class="skill-fill" style="width:50%; background:linear-gradient(90deg,#6ee7b7,#10b981);"></div>
+                    <div class="skill-fill" style="width:45%; background:linear-gradient(90deg,#fbbf24,#f59e0b);"></div>
                 </div>
             </div>
+
+            <div class="skill-row">
+                <div class="skill-meta">
+                    <span style="font-weight:600; color:#1e293b; font-size:14px;">大模型开发与算法（了解）</span>
+                    <span style="color:#047857; font-weight:600; font-size:13px;">入门了解 · 25%</span>
+                </div>
+                <div class="skill-track">
+                    <div class="skill-fill" style="width:25%; background:linear-gradient(90deg,#6ee7b7,#10b981);"></div>
+                </div>
+            </div>
+
+            <p style="margin-top:14px; font-size:13px; color:#94a3b8; line-height:1.8;">
+                目前定位是"会但还不够硬"，计划通过实习和系统刷题，把 C++ 与算法基础练扎实，
+                再向大模型开发与算法方向拓展视野。
+            </p>
 
             <h3 style="color:#1e293b; font-size:15px; font-weight:600; margin:26px 0 10px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">
                 软技能（人际 / 通用能力）
             </h3>
             <div class="soft-tags">
-                <span class="tag" style="background:#ecfdf5; color:#047857; border-color:#6ee7b7;">【软技能 1】</span>
-                <span class="tag" style="background:#ecfdf5; color:#047857; border-color:#6ee7b7;">【软技能 2】</span>
+                <span class="tag" style="background:#ecfdf5; color:#047857; border-color:#6ee7b7;">善于沟通</span>
+                <span class="tag" style="background:#ecfdf5; color:#047857; border-color:#6ee7b7;">团队协作</span>
+                <span class="tag" style="background:#ecfdf5; color:#047857; border-color:#6ee7b7;">时间管理</span>
             </div>
+            <p style="margin-top:12px; font-size:13px; color:#94a3b8; line-height:1.8;">
+                可以顺畅沟通、配合同事协作，大部分时间能把学习和任务安排得过来。
+            </p>
         </section>
 
         <!-- 返回顶部 -->

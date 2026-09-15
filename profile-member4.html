@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <!--
   ==========================================================================
-  成员 4 个人主页 —— 占位模板（使用前请按以下清单替换全部【】内容）
-  --------------------------------------------------------------------------
-  □ 1. 头像：把本人正方形照片命名为 member4.png，覆盖 images/member4.png
-  □ 2. 全文搜索【成员4姓名】替换为真实姓名（共约 6 处）
-  □ 3. 把【学号】【邮箱地址】【家乡】【班级】【性格/MBTI】替换为真实信息
-  □ 4. “个人简介”段落改成自己的介绍
-  □ 5. “爱好与兴趣”：替换文字，并把灰色占位框换成 <img> 图片
-       （写法见注释，图片放进 images 文件夹）
-  □ 6. “职业技能发展规划”：替换短期、长期目标
-  □ 7. 联系方式中的邮箱：同时替换 mailto: 后面的地址和显示的文字
-  □ 8. 最后把本文件重命名为 profile-姓名拼音.html，更直观（可选）
+  成员 4 个人主页 —— 王丰源（SA26225312）
+  头像替换：把本人正方形照片命名为 member4.png，覆盖 images/member4.png 即可
   ==========================================================================
 -->
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【成员4姓名】 - 个人主页</title>
+    <title>王丰源 - 个人主页</title>
     <!-- 外部 CSS 样式表 -->
     <link rel="stylesheet" href="css/style.css">
     <!-- 页面内部内嵌 CSS：ID 选择器 + 标题样式 + 上下文选择器 -->
@@ -57,19 +48,18 @@
     <!-- ========== 顶部横幅：照片 + 姓名 + 学号 ========== -->
     <header class="header">
         <nav class="nav">
-            <span class="nav-brand">【成员4姓名】的个人主页</span>
+            <span class="nav-brand">王丰源的个人主页</span>
             <div class="nav-links">
                 <a class="link" href="index.html">团队页面</a>
                 <a class="link" href="skills.html#member4">职业技能页面</a>
-                <!-- 替换邮箱：把 mailto: 后的地址改成自己的邮箱 -->
-                <a class="link" href="mailto:【邮箱地址】">电子邮箱</a>
+                <a class="link" href="mailto:3081075021@qq.com">电子邮箱</a>
             </div>
         </nav>
         <div class="hero">
             <!-- 头像替换：用本人照片覆盖 images/member4.png（建议正方形）即可 -->
-            <img class="avatar" src="images/member4.png" alt="【成员4姓名】的个人照片（当前为占位示例图）">
-            <h1>【成员4姓名】</h1>
-            <p class="stu-id">学号：【学号】</p>
+            <img class="avatar" src="images/member4.png" alt="王丰源的个人照片（当前为占位示例图）">
+            <h1>王丰源</h1>
+            <p class="stu-id">学号：SA26225312</p>
         </div>
     </header>
 
@@ -80,15 +70,18 @@
         <section class="card">
             <h2>个人简介</h2>
             <p id="bio-text">
-                【在此填写个人背景介绍，2～3 句话即可。例如：大家好，我是……
-                来自……，就读于……专业/班级，性格……平时喜欢……】
+                大家好，我是王丰源，来自
+                <span class="accent">安徽蚌埠</span>，目前就读于
+                <span class="accent">嵌入式 1 班</span>。
+                我的 MBTI 是 <span class="accent">INTJ</span>，喜欢独立思考、做长期规划，
+                习惯先想清楚目标再动手，对底层技术与系统开发有浓厚兴趣。
             </p>
             <ul class="info-list" style="margin-top:14px;">
-                <li><span class="info-label">姓名</span>【成员4姓名】</li>
-                <li><span class="info-label">学号</span>【学号】</li>
-                <li><span class="info-label">家乡</span>【家乡】</li>
-                <li><span class="info-label">班级</span>【年级 / 专业 / 班级】</li>
-                <li><span class="info-label">性格</span>【性格特点或 MBTI】</li>
+                <li><span class="info-label">姓名</span>王丰源</li>
+                <li><span class="info-label">学号</span>SA26225312</li>
+                <li><span class="info-label">家乡</span>安徽蚌埠</li>
+                <li><span class="info-label">班级</span>嵌入式 1 班</li>
+                <li><span class="info-label">MBTI</span>INTJ（建筑师型）</li>
             </ul>
         </section>
 
@@ -96,31 +89,23 @@
         <section class="card">
             <h2>爱好与兴趣</h2>
             <p>
-                【在此介绍自己的爱好与兴趣，例如：课余时间我喜欢……
-                它让我收获了……】
+                没有特别固定的爱好，但<span class="accent">兴趣广泛</span>：
+                喜欢了解和尝试新鲜事物，从摄影记录生活、户外出行看世界，
+                到各类技术与数码产品都愿意琢磨一番，享受探索未知的过程。
             </p>
             <!--
               爱好配图替换方法：
-              把灰色占位框 <div class="photo-placeholder">...</div> 整段替换为：
-                <img src="images/你的图片文件名.jpg" alt="图片说明">
-              例如：
-                <figure>
-                    <img src="images/my-photo.jpg" alt="旅行照片">
-                    <figcaption>旅行 —— 用脚步丈量世界</figcaption>
-                </figure>
+              把真实照片放进 images 文件夹，然后修改下面两个 <img> 的 src 即可，
+              例如 src="images/my-camera.jpg"、src="images/my-travel.jpg"
             -->
             <div class="gallery">
                 <figure>
-                    <div class="photo-placeholder">
-                        【爱好配图 1】<br>替换方法见本文件上方注释
-                    </div>
-                    <figcaption>【爱好名称 1】—— 【一句话描述】</figcaption>
+                    <img src="images/hobby-camera.svg" alt="摄影示意图">
+                    <figcaption>摄影 —— 用镜头记录生活与细节</figcaption>
                 </figure>
                 <figure>
-                    <div class="photo-placeholder">
-                        【爱好配图 2】<br>替换方法见本文件上方注释
-                    </div>
-                    <figcaption>【爱好名称 2】—— 【一句话描述】</figcaption>
+                    <img src="images/hobby-travel.svg" alt="旅行户外示意图">
+                    <figcaption>旅行户外 —— 走出去，世界就在眼前</figcaption>
                 </figure>
             </div>
         </section>
@@ -129,21 +114,25 @@
         <section class="card">
             <h2>职业技能发展规划</h2>
             <p>
-                【一句话引出自己的规划，例如：围绕……方向，我制定了以下短期与长期目标。】
+                我的求职主线是<span class="accent">C++ 后端开发</span>，同时关注大模型方向，
+                具体能力清单见 <a class="link" href="skills.html#member4">职业技能页面</a>。
             </p>
             <div class="plan-grid">
                 <div class="plan-card plan-short">
                     <h3>短期目标</h3>
                     <p>
-                        【填写短期目标，例如本学期/本学年要掌握的技能、
-                        要参加的比赛或实习，1～2 句话】
+                        尽快找到一份实习，亲身了解真实的就业环境与工程开发流程；
+                        目前主攻 <strong>C++ 后端开发</strong>，夯实 C++ 语言、
+                        数据结构与算法、操作系统、网络等基础，
+                        同时主动了解大模型开发与算法，拓宽技术视野。
                     </p>
                 </div>
                 <div class="plan-card plan-long">
                     <h3>长期目标</h3>
                     <p>
-                        【填写长期目标，例如毕业后的就业方向、希望进入的行业
-                        或成为什么样的人才，1～2 句话】
+                        在充分接触不同方向后，<strong>选择一个方向坚持深耕</strong>，
+                        持续积累工程经验与技术深度，成为该领域里能解决复杂问题、
+                        有核心竞争力的工程师。
                     </p>
                 </div>
             </div>
@@ -155,8 +144,7 @@
             <ul class="info-list">
                 <li>
                     <span class="info-label">电子邮箱</span>
-                    <!-- mailto: 后的地址与显示文字都要替换 -->
-                    <a class="link" href="mailto:【邮箱地址】">【邮箱地址】</a>
+                    <a class="link" href="mailto:3081075021@qq.com">3081075021@qq.com</a>
                 </li>
                 <li>
                     <span class="info-label">团队页面</span>
@@ -172,7 +160,7 @@
     </div>
 
     <footer class="footer">
-        <p class="stu-id" style="color:#94a3b8 !important;">© 2026 【成员4姓名】 · 【学号】 · 个人主页</p>
+        <p class="stu-id" style="color:#94a3b8 !important;">© 2026 王丰源 · SA26225312 · 个人主页</p>
     </footer>
 
 </body>

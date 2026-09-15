@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 爱好示意图：摄影（SVG 矢量图，可替换为真实照片） -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <radialGradient id="lens" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="45%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="600" fill="url(#bg)"/>
+
+  <!-- 取景框装饰角 -->
+  <g stroke="#6ee7b7" stroke-width="6" fill="none" opacity="0.8">
+    <path d="M70 90 L70 50 L110 50"/>
+    <path d="M690 90 L690 50 L650 50"/>
+    <path d="M70 470 L70 510 L110 510"/>
+    <path d="M690 470 L690 510 L650 510"/>
+  </g>
+
+  <!-- 相机机身 -->
+  <g transform="translate(400 300)">
+    <!-- 机顶军舰部 -->
+    <rect x="-110" y="-140" width="130" height="60" rx="12" fill="#1f2937"/>
+    <!-- 快门 -->
+    <rect x="150" y="-132" width="44" height="20" rx="6" fill="#475569"/>
+    <!-- 机身 -->
+    <rect x="-220" y="-90" width="440" height="240" rx="28" fill="#374151"/>
+    <rect x="-220" y="-90" width="440" height="240" rx="28" fill="none" stroke="#6b7280" stroke-width="3"/>
+    <!-- 镜头外圈 -->
+    <circle cx="0" cy="30" r="108" fill="#111827"/>
+    <circle cx="0" cy="30" r="108" fill="none" stroke="#6b7280" stroke-width="6"/>
+    <!-- 镜头玻璃 -->
+    <circle cx="0" cy="30" r="82" fill="url(#lens)"/>
+    <circle cx="0" cy="30" r="82" fill="none" stroke="#064e3b" stroke-width="4"/>
+    <!-- 镜头反光 -->
+    <ellipse cx="-26" cy="0" rx="26" ry="16" fill="#ffffff" opacity="0.35"/>
+    <circle cx="26" cy="56" r="10" fill="#6ee7b7" opacity="0.6"/>
+    <!-- 对焦齿纹 -->
+    <g stroke="#6b7280" stroke-width="4">
+      <line x1="-108" y1="30" x2="-92" y2="30"/>
+      <line x1="108" y1="30" x2="92" y2="30"/>
+      <line x1="0" y1="-78" x2="0" y2="-62"/>
+      <line x1="0" y1="138" x2="0" y2="122"/>
+    </g>
+    <!-- 红色录制点 -->
+    <circle cx="160" cy="-50" r="12" fill="#ef4444"/>
+  </g>
+
+  <text x="400" y="530" text-anchor="middle" font-family="Microsoft YaHei, sans-serif"
+        font-size="48" font-weight="bold" fill="#a7f3d0" letter-spacing="10">摄 影 · 记 录</text>
+</svg>
